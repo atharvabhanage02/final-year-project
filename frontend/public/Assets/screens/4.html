@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex relative">
+    <div class='max-w-xs w-2/3 py-20 px-10 bg-gray-800 text-white h-screen sticky top-0'>
+        <div class='font-bold text-2xl'>Steps to Post a job : </div>
+        <div class='py-6 px-4'>
+            <div class="text-slate-400">
+                <span class="fa fa-check-circle"></span>
+                <a href="/find" class=""> Find your Company</a>
+            </div>
+            <div class="text-slate-400">
+                <span class="fa fa-check-circle"></span>
+                <a href="/find" class=""> Get recruiter access</a>
+            </div>
+            <div class="text-slate-400">
+                <span class="fa fa-check-circle"></span>
+                <a href="/find" class=""> Set up your account</a>
+            </div>
+            <div class="">
+                <span class="">&#x25EF;</span>
+                <a href="/find" class=""> Post the job</a>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="py-14 px-16">
+        <div>
+            <div class="font-extrabold text-3xl my-8">Posting a job is fast and free</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit qui perspiciatis facilis? Illo adipisci dolorum explicabo nesciunt voluptatum ratione consequatur tempora, cupiditate natus voluptate corrupti facilis ad pariatur incidunt obcaecati.</p>
+        </div>
+        <div class="my-8 flex flex-col ">
+            <label for="title">Title*</label>
+            <input type="text" name="" id="title" class="py-2 px-3 mr-8 w-full border-2 border-slate-900 rounded-md">
+        </div>
+        <div class="my-8 flex flex-col">
+            <label for="desc">Description*</label>
+            <textarea class="border-2 border-slate-900 rounded-md w-full" name="" id="desc" cols="15" rows="5"></textarea>
+        </div>
+        <div class="my-8 flex flex-col ">
+            <label for="top">Type of position*</label>
+            <select name="top" id="top" class="border-2 border-black rounded-md py-2 px-3">
+                <option value="">--Select--</option>
+                <option value="">Full time</option>
+                <option value="">Part time</option>
+                <option value="">Internship</option>
+                <option value="">Contract</option>
+            </select>
+        </div>
+        <div class="my-8 flex flex-col ">
+            <label for="Prirole">Primary role*</label>
+            <select name="Prirole" id="Prirole" class="border-2 border-black rounded-md py-2 px-3">
+                <option value="">--Select--</option>
+                <option value="">Software Engineer</option>
+                <option value="">Software Developer</option>
+                <option value="">Front end Developer</option>
+                <option value="">Full Stack developer</option>
+            </select>
+        </div>
+        <div class="my-8 flex flex-col ">
+            <label for="workexp">Work Experience</label>
+            <select name="workexp" id="workexp" class="border-2 border-black rounded-md py-2 px-3">
+                <option value="" >--Select--</option>
+                <option value="">0-2</option>
+                <option value="">3-5</option>
+                <option value="">6-10</option>
+                <option value="">10 and above</option>
+            </select>
+        </div>
+        
+        <div class="my-8 flex flex-col ">
+            <label for="skills">Skills*</label>
+            <textarea class="border-2 border-slate-900 rounded-md w-full" name="skills" id="skills" cols="15" rows="5"></textarea>
+        </div>
+        <div class="my-8 flex flex-col ">
+            <div class="font-bold text-lg">Location</div>
+
+            <div >
+                <div class="mb-2">Visa Sponsorship(US only)</div>
+                <input type="radio" name="1" id="yes">
+                <label for="yes" class="pr-5">Yes</label>
+                <input type="radio" name="1" id="no">
+                <label for="no" class="pr-5">No</label>
+            </div>
+            <div class="my-5">
+                <label for="loc">Location*</label>
+                <div class="border-2 border-slate-900 rounded-md flex">
+                    <div class="fa fa-search p-2 px-4 bg-slate-400" ></div>
+                    <input class=" px-3 mr-8 w-full " type="text" name="loc" id="loc" placeholder="e.g San Fransisco">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="my-8">
+            <div class="font-bold text-lg">Remote Work Details</div>
+            <p class="text-slate-400 my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa doloremque necessitatibus placeat voluptatem possimus eum aliquid sapiente architecto modi rem veritatis incidunt neque, mollitia quam.</p>
+            <div class="font-bold my-8">What'sYour remote policy for the job</div>
+            <input type="radio" name="remote" id="inoff">
+            <label class="pr-5" for="inoff">In Office</label>
+            <input type="radio" name="remote" id="onwfh">
+            <label class="pr-5" for="onwfh">Onsite or Remote</label>
+            <input type="radio" name="remote" id="wfh">
+            <label class="pr-5" for="ehf">Remote</label>
+
+            <div class="font-bold text-lg my-8">Hiring regions for Remote workers</div>
+            <p class="text-slate-400 my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa doloremque necessitatibus placeat voluptatem possimus eum aliquid sapiente architecto modi rem veritatis incidunt neque, mollitia quam.</p>
+            <div class="border-2 border-slate-900 rounded-md flex">
+                <div class="fa fa-search p-2 px-4 bg-slate-400" ></div>
+                <input class=" px-3 mr-8 w-full " type="text" name="loc" id="loc" placeholder="e.g San Fransisco">
+            </div>
+
+            <div class="my-4">
+                <input type="checkbox" name="" id="remoteacceptance">
+                <label for="remoteacceptance">Accept remote fromanywhere in the world</label>
+            </div>
+        </div>
+        <div class="my-8">
+            <div class="font-bold text-lg">Salary and equity</div>
+            <p class="text-slate-400 my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa doloremque necessitatibus placeat voluptatem possimus eum aliquid sapiente architecto modi rem veritatis incidunt neque, mollitia quam.</p>
+            <label for="workexp">Currency</label>
+            <select name="workexp" id="workexp" class="border-2 border-black rounded-md py-2 px-3">
+                <option value="" >--Select--</option>
+                <option value="">INR (Rs)</option>
+                <option value="">USD ($)</option>
+                <option value="">EURO</option>
+                <option value="">YEN</option>
+            </select>
+            <div class=" text-lg my-8">Annual Salary range</div>
+            <p class="text-slate-400 my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, tempore earum consequuntur alias doloremque dolor quidem molestiae molestias provident nihil ducimus fugit et ullam soluta!</p>
+            <div class="flex ">
+                <div class="flex w-1/4 mr-8 border-2 border-slate-900 rounded-md">
+                    <div class="fa fa-dollar p-2 px-4 bg-slate-400" ></div>
+                    <input class=" px-3 mr-8 w-full " type="text" name="loc" id="salrange" placeholder="0">
+                </div>
+                <div class="flex w-1/4 mr-8 border-2 border-slate-900 rounded-md">
+                    <div class="fa fa-dollar p-2 px-4 bg-slate-400" ></div>
+                    <input class=" px-3 mr-8 w-full " type="text" name="loc" id="salrange" placeholder="0">
+                </div>
+            </div>
+            <div class="my-4">
+                <input type="checkbox" name="" id="equity">
+                <label for="equity">No Equity</label>
+            </div>
+            
+        </div>
+        
+
+        
+
+    </div>
+
+</body>
+</html>
