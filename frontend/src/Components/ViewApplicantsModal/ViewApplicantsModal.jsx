@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CSVLink, CSVDownload } from "react-csv";
+import { useNavigate } from "react-router-dom";
 
 function ViewApplicantsModal({ clickHandler, isOpen, applicants }) {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function ViewApplicantsModal({ clickHandler, isOpen, applicants }) {
   //     ["Raed", "Labes", "rl@smthing.co.com"],
   //     ["Yezzi", "Min l3b", "ymin@cocococo.com"],
   //   ];
+  const navigate = useNavigate();
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10 " onClose={closeModal}>
@@ -59,13 +61,24 @@ function ViewApplicantsModal({ clickHandler, isOpen, applicants }) {
                           <p>
                             {applicant.firstName} {applicant.lastName}
                           </p>
-                          <p className="text-sm underline cursor-pointer text-[#0F74FF]">
+                          <p
+                            className="text-sm underline cursor-pointer text-[#0F74FF]"
+                            onClick={() =>
+                              navigate(`/student/${applicant?._id}`)
+                            }
+                          >
                             View Profile
                           </p>
                         </div>
                       );
                     })}
-                    <CSVLink data={applicants} filename={"job_applicants.csv"} className="m-auto shadow-2xl p-1.5 rounded-lg bg-lime-600 text-white">Generate EXCEL Sheet</CSVLink>
+                    <CSVLink
+                      data={applicants}
+                      filename={"job_applicants.csv"}
+                      className="m-auto shadow-2xl p-1.5 rounded-lg bg-lime-600 text-white"
+                    >
+                      Generate EXCEL Sheet
+                    </CSVLink>
                   </div>
                 </div>
               </Dialog.Panel>

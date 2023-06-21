@@ -11,6 +11,7 @@ import { RecruiterProfile } from "./Pages/RecruiterProfile/RecruiterProfile";
 import { LoginPage } from "./Pages/Authentication/LoginPage";
 import { SignupPage } from "./Pages/Authentication/SignupPage";
 import { LandingPage } from "./Pages/LandingPage/LandingPage";
+import { ViewStudentInfo } from "./Pages/ViewStudentInfo/ViewStudentInfo";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,7 @@ function App() {
         <Route path="/recruiter/createjob" element={<CreateJob />} />
         <Route path="/recruiter/postedjob" element={<PostedJob />} />
         <Route path="/recruiter/company" element={<RecruiterProfile />} />
+        <Route path="/student/:studentId" element={<ViewStudentInfo />} />
       </Routes>
     </div>
   );
