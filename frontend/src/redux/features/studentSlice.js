@@ -72,11 +72,12 @@ const studentSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getStudentInfo.fulfilled, (state, action) => {
       console.log("payload is ", action.payload);
-      state.studentInfo = action.payload.data.student[0];
+      state.studentInfo = action.payload.data.student;
       localStorage.setItem(
         "student",
-        JSON.stringify(action.payload.data.student[0])
+        JSON.stringify(action.payload.data.student)
       );
+      console.log("Localstorage ", localStorage.getItem("student"));
     });
     builder.addCase(updateAboutSection.fulfilled, (state, action) => {
       console.log("Update API call", action.payload);

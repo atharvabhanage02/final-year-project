@@ -63,6 +63,10 @@ function ProfileOverview() {
             {studentInfo.primary_role}
           </p>
         </div>
+        {/* <div>
+          <p className="text-sm mb-2 text-[#717584]">Achievements</p>
+          <p>{studentInfo?.achievements}</p>
+        </div> */}
       </div>
     </div>
   );

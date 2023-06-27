@@ -83,7 +83,7 @@ exports.createNewProfile = async (req, res, next) => {
 
 exports.getStudentInfo = async (req, res, next) => {
   const { id } = req.params;
-  const student = await Student.find({ _id: id });
+  const student = await Student.findOne({ _id: id });
   res.status(200).json({
     success: true,
     message: "Student details fetched successfully",
@@ -138,7 +138,10 @@ exports.updateStudentAchievements = async (req, res, next) => {
 exports.addEducation = async (req, res, next) => {
   const { id } = req.params;
   const { college_name, graduation, degree, gpa, max_gpa } = req.body;
-  const student = await Student.findOneAndUpdate({ _id: id }, { college_name, graduation, degree, gpa, max_gpa });
+  const student = await Student.findOneAndUpdate(
+    { _id: id },
+    { college_name, graduation, degree, gpa, max_gpa }
+  );
   res.status(200).json({
     success: true,
     message: "Education added successfully",

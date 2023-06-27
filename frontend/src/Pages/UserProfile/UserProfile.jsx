@@ -9,9 +9,9 @@ import { getStudentInfo } from "../../redux/features/studentSlice";
 
 function UserProfile() {
   const studentId = useSelector((state) => state.job.id);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    console.log("Get Student info")
+    console.log("Student id ", studentId);
     dispatch(getStudentInfo(studentId));
   }, []);
   return (
